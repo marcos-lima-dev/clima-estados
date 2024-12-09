@@ -3,9 +3,9 @@ import WeatherDashboard from './components/WeatherDashboard';
 
 function App() {
   return (
-    <main className="min-h-screen bg-slate-50">
+    <div className="min-h-screen bg-gradient-to-r from-blue-300 to-blue-800">
       <WeatherDashboard />
-    </main>
+    </div>
   );
 }
 
