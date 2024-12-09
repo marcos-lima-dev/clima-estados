@@ -1,7 +1,6 @@
-import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Sunrise, Sunset } from "lucide-react";
-import type { PrevisaoDia } from "../../types/weather";
+import type { PrevisaoDia } from "../types/weather";
 
 interface ForecastProps {
     previsao: PrevisaoDia[];

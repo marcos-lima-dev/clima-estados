@@ -1,14 +1,7 @@
-export interface PrevisaoDia {
-    data: string;
-    maxima: number;
-    minima: number;
-    condicao: string;
-    iconUrl: string;
-    chanceDeChova: number;
-    umidade: number;
-}
-
 export interface WeatherData {
+    cidade: string;
+    estado: string;
+    pais: string;
     temperatura: {
         atual: number;
         sensacao: number;
@@ -18,15 +11,29 @@ export interface WeatherData {
     condicao: string;
     iconUrl: string;
     atualizadoEm: string;
-    cidade: string;
-    estado: string;
-    pais: string;
     nasceDoSol: string;
     porDoSol: string;
-    previsao: PrevisaoDia[];
+    previsao: Array<{
+        data: string;
+        maxima: number;
+        minima: number;
+        condicao: string;
+        iconUrl: string;
+        chanceDeChova: number;
+        umidade: number;
+    }>;
 }
 
 export interface WeatherError {
     message: string;
-    code?: string;
+}
+
+export interface PrevisaoDia {
+    data: string;
+    iconUrl: string;
+    condicao: string;
+    maxima: number;
+    minima: number;
+    chanceDeChova: number;
+    umidade: number;
 }
